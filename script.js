@@ -7,19 +7,18 @@ function Input() {
   alert("welcome: " + username);
   var score = 0;
   let usernumber = Math.round(Math.random() * 10);
-  alert(usernumber);
-    userinput = prompt("Try to predict the given number within the range " + score + " - 10");
+  userinput = prompt("Try to predict the given number within the range " + score + " - 10");
   if (userinput != "null") {
-      if (userinput == usernumber) {
-        for (score=1; score<= 3; score++) {
-          alert("You are in stage: " + score);
-          userinput = prompt("Try to predict the given number within the range " + score + " - 10"); 
-        }
-      } else {
-        alert("Game over, please try again");
+    if (userinput == usernumber) {
+      for (score = 1; score <= 3; score++) {
+        alert("You are in stage: " + score);
+        userinput = prompt("Try to predict the given number within the range " + score + " - 10");
       }
-
+    } else {
+      alert("Game over, please try again");
     }
+
+  }
   else {
     alert("Enter a valid input")
   }
